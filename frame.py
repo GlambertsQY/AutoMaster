@@ -147,8 +147,9 @@ class Frame(wx.Frame):
 
             # 获取事件名称
             message = event.MessageName
-            # 仅监听以下事件
-            all_messages = ('mouse left down', 'mouse left up', 'mouse right down', 'mouse right up', 'mouse move')
+            # 仅监听以下事件， 空则屏蔽鼠标事件
+            # all_messages = ('mouse left down', 'mouse left up', 'mouse right down', 'mouse right up', 'mouse move')
+            all_messages = ()
             if message not in all_messages:
                 return True
 
